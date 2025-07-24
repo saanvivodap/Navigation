@@ -10,16 +10,37 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationStack {
+            Text("This is the Root View ")
             VStack {
-                Text("This is the root view")
-                NavigationLink(destination: SecondView()) {
-                Text("CLICK ME!")
+                NavigationLink(destination: Home()) {
+                    Text("Home")
+                        .navigationTitle("Home")
+                        .navigationBarTitleDisplayMode(.inline)
+                        .navigationBarHidden(true)
+                }
+                NavigationLink(destination: About()) {
+                    Text("About")
+                        .navigationTitle("Home")
+                        .navigationBarTitleDisplayMode(.inline)
+                        .navigationBarHidden(true)
+                        
+                }
+                NavigationLink(destination: ContactUs()) {
+                Text("Contact Us")
+                    .navigationTitle("Home")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarHidden(true)
+
+                }
+                NavigationLink(destination: Help()) {
+                Text("Help")
+                    .navigationTitle("Home")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarHidden(true)
+
                 }
             }
         }
-        .navigationTitle("Home")
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarHidden(true)
     }
 }
 
